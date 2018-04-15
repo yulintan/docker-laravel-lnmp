@@ -8,10 +8,10 @@ set up lnmp for laravel in docker container
 
 # Starting up
 ## Step 1
-    In workspace, run `laravel new docker-laravel` to create a project `docker-laravel`
+In workspace, run `laravel new docker-laravel` to create a project `docker-laravel`
     
 ## Step 2
-    In side of docker-laravel root folder, create `docker-compose.yml` file
+In side of docker-laravel root folder, create `docker-compose.yml` file
     
 docker-compose.yml:
 ```
@@ -63,7 +63,7 @@ services:
 
 ```    
 ## Step 3
-    create Dockerfile for application container
+create Dockerfile for application container
     
 ./images/application/Dockerfile:    
 ```
@@ -74,7 +74,7 @@ RUN apt-get update && apt-get install -y libmcrypt-dev mysql-client \
 
 ```    
 ## Step 4
-    create vhost.conf for Nginx container
+create vhost.conf for Nginx container
 
 ./images/nginx/vhost.conf:    
 ```
@@ -98,9 +98,9 @@ server {
 }
 ```
 ## Step 5
-    run `$ docker-compose up -d` to start those containers
+run `$ docker-compose up -d` to start those containers
 
-`$ docker-compose ps` can show you the current running container
+`$ docker-compose ps` can show you the current running containers
 ```
 CONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS              PORTS                    NAMES
 b328ba1b437d        nginx:latest                "nginx -g 'daemon ..."   9 hours ago         Up 9 hours          0.0.0.0:8080->80/tcp     webserver
